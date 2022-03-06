@@ -1,0 +1,42 @@
+{
+  "name": "mdcss-theme-macian",
+  "version": "1.0.0",
+  "description": "An mdcss theme for the Macian CSS framework.",
+  "keywords": [
+    "mdcss",
+    "mdcss-theme",
+    "theme",
+    "css",
+    "macian"
+  ],
+  "author": "Jake Franklin <jacob.d.franklin@gmail.com>",
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakofranko/mdcss-theme-macian.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jakofranko/mdcss-theme-macian/issues"
+  },
+  "homepage": "git+https://github.com/jakofranko/mdcss-theme-macian.git#readme",
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "fs-extra": "^0.26.1",
+    "fs-promise": "^0.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^1.8.0",
+    "mdcss": "^1.1.1",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.2"
+  },
+  "scripts": {
+    "lint": "eslint . --ignore-path .eshintignore",
+    "test-fixtures": "tape test.js | tap-spec",
+    "test": "npm run lint && npm run test-fixtures"
+  },
+  "engines": {
+    "iojs": ">=2.0.0",
+    "node": ">=0.12.0"
+  }
+}
