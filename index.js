@@ -24,10 +24,6 @@ module.exports = function (themeopts) {
 		// set theme options
 		docs.themeopts = themeopts;
 
-        console.log('mdcss docs list', docs.list);
-
-        docs.list.forEach(function(item) {console.log(item.children)});
-
 		// return promise
 		return new Promise(function (resolve, reject) {
 			// read template

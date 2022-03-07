@@ -1,79 +1,290 @@
 <!doctype html>
 <html>
-    <head>
-        <title><%- opts.title || themeopts.title %></title>
-        <meta charset="utf-8">
-        <link href="prism.css" rel="stylesheet">
-        <link rel="stylesheet" href="<%- opts.macianLocation || themeopts.macianLocation %>">
-        <script src="examples.js"></script>
-        <script>examples.css = ['<%- opts.macianLocation || themeopts.macianLocation %>'];</script>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <img src="<%- opts.logo || themeopts.logo %>" alt="Style Guide" />
-                <% function renderNavigation(children, depth) { %>
-                    <ul>
-                        <% if (depth < 3) children.forEach(function (child) {
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		<%- opts.title || themeopts.title %>
+	</title>
+	<link href="prism.css" rel="stylesheet">
+	<link rel="stylesheet" href="<%- opts.macianLocation || themeopts.macianLocation %>">
+	<script src="examples.js"></script>
+	<script>
+		examples.css = ['<%- opts.macianLocation || themeopts.macianLocation %>'];
+	</script>
+	<style media="screen">
+        ul ul { padding-inline-start: 20px; }
+        .top-b { top: 12em; }
+		#grid {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr;
+		}
+	</style>
+</head>
+
+<body>
+	<main class="container p4">
+		<header class="pv5">
+			<h1 class="mb3 f5 ac upc tk">Macian</h1>
+		</header>
+
+		<div class="w9-s w9-m w6-l cn">
+
+			<div class="mb5">
+				<div class="r">
+					<div class="c6 c6-m r mb5 mb0-l pr4-m pr4-l">
+						<div class="cb cb-s cb-m sh4 bt bb br bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bt bb bw2"></div>
+						<div class="ca ca-s ca-m sh4 bb br bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb bw2"></div>
+						<div class="c9 c9-s c9-m sh4 bb br bw2"></div>
+						<div class="c3 c3-s c3-m sh4 bb bw2"></div>
+						<div class="c8 c8-s c8-m sh4 bb br bw2"></div>
+						<div class="c4 c4-s c4-m sh4 bb bw2"></div>
+						<div class="c7 c7-s c7-m sh4 bb br bw2"></div>
+						<div class="c5 c5-s c5-m sh4 bb bw2"></div>
+						<div class="c6 c6-s c6-m sh4 bb br bw2"></div>
+						<div class="c6 c6-s c6-m sh4 bb bw2"></div>
+						<div class="c5 c5-s c5-m sh4 bb br bw2"></div>
+						<div class="c7 c7-s c7-m sh4 bb bw2"></div>
+						<div class="c4 c4-s c4-m sh4 bb br bw2"></div>
+						<div class="c8 c8-s c8-m sh4 bb bw2"></div>
+						<div class="c3 c3-s c3-m sh4 bb br bw2"></div>
+						<div class="c9 c9-s c9-m sh4 bb bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb br bw2"></div>
+						<div class="ca ca-s ca-m sh4 bb bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb br bw2"></div>
+						<div class="cb cb-s cb-m sh4 bb bw2"></div>
+					</div>
+					<div class="c6 c6-m r mb4 mb0-l pl4-m pl4-l">
+						<div class="cc sh4 bt bb bw2"></div>
+						<div class="c6 c6-s c6-m sh4 bb br bw2"></div>
+						<div class="c6 c6-s c6-m sh4 bb bw2"></div>
+						<div class="c4 c4-s c4-m sh4 bb br bw2"></div>
+						<div class="c4 c4-s c4-m sh4 bb br bw2"></div>
+						<div class="c4 c4-s c4-m sh4 bb bw2"></div>
+						<div class="c3 c3-s c3-m sh4 bb br bw2"></div>
+						<div class="c3 c3-s c3-m sh4 bb br bw2"></div>
+						<div class="c3 c3-s c3-m sh4 bb br bw2"></div>
+						<div class="c3 c3-s c3-m sh4 bb bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb br bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb br bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb br bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb br bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb br bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb br bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb br bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb br bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb br bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb br bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb br bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb br bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb br bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb br bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb br bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb br bw2"></div>
+						<div class="c1 c1-s c1-m sh4 bb bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb br bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb br bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb br bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb br bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb br bw2"></div>
+						<div class="c2 c2-s c2-m sh4 bb bw2"></div>
+						<div class="c3 c3-s c3-m sh4 bb br bw2"></div>
+						<div class="c3 c3-s c3-m sh4 bb br bw2"></div>
+						<div class="c3 c3-s c3-m sh4 bb br bw2"></div>
+						<div class="c3 c3-s c3-m sh4 bb bw2"></div>
+						<div class="c4 c4-s c4-m sh4 bb br bw2"></div>
+						<div class="c4 c4-s c4-m sh4 bb br bw2"></div>
+						<div class="c4 c4-s c4-m sh4 bb bw2"></div>
+						<div class="c6 c6-s c6-m sh4 bb br bw2"></div>
+						<div class="c6 c6-s c6-m sh4 bb bw2"></div>
+						<div class="cc sh4 bb bw2"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mb5">
+				<div class="r f6 tkt">
+					<div class="c3 c6-m pv3 pr4 pb0-l al" title=".al">
+						&#9608; &#9608; &#9608;&#9608; &#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608; &#9608;&#9608; &#9608; &#9608;
+					</div>
+					<div class="c3 c6-m pv3 ph4 pb0-l aj" title=".aj">
+						&#9608; &#9608; &#9608;&#9608; &#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608; &#9608;&#9608; &#9608; &#9608;
+					</div>
+					<div class="c3 c6-m pv3 ph4 pb0-l ac" title=".ac">
+						&#9608; &#9608; &#9608;&#9608; &#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608; &#9608;&#9608; &#9608; &#9608;
+					</div>
+					<div class="c3 c6-m pv3 pl4 pb0-l ar" title=".ar">
+						&#9608; &#9608; &#9608;&#9608; &#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608;&#9608;&#9608; &#9608;&#9608;&#9608; &#9608;&#9608; &#9608; &#9608;
+					</div>
+				</div>
+			</div>
+
+			<div class="mb5">
+				<div class="mb3">
+					<p class="f1 lhs bg-noir">1</p>
+				</div>
+				<div class="mb3">
+					<p class="f2 lhs bg-noir">2</p>
+				</div>
+				<div class="mb3">
+					<p class="f3 lhs bg-noir">3</p>
+				</div>
+				<div class="mb3">
+					<p class="f4 lhs bg-noir">4</p>
+				</div>
+				<div class="mb3">
+					<p class="f5 lhs bg-noir">5</p>
+				</div>
+				<div class="mb3">
+					<p class="f6 lhs bg-noir">6</p>
+				</div>
+			</div>
+
+			<div id="grid" class="mb5 g grg3 gcg3">
+				<div class="sh4 bg-f"></div>
+				<div class="sh4 bg-e"></div>
+				<div class="sh4 bg-d"></div>
+				<div class="sh4 bg-c"></div>
+				<div class="sh4 bg-b"></div>
+				<div class="sh4 bg-a"></div>
+				<div class="sh4 bg-9"></div>
+				<div class="sh4 bg-8"></div>
+				<div class="sh4 bg-7"></div>
+				<div class="sh4 bg-6"></div>
+				<div class="sh4 bg-5"></div>
+				<div class="sh4 bg-4"></div>
+				<div class="sh4 bg-3"></div>
+				<div class="sh4 bg-2"></div>
+				<div class="sh4 bg-1"></div>
+				<div class="sh4 bg-0"></div>
+			</div>
+
+			<div class="mb5">
+				<div class="r f6">
+					<div class="mb4 mb0-l c6 pr4-l">
+						<div class="mb3 bg-noir pb1"></div>
+						<div class="mb3 bg-noir pb2"></div>
+						<div class="mb3 bg-noir pb3"></div>
+						<div class="mb3 bg-noir pb4"></div>
+						<div class="mb3 bg-noir pb5"></div>
+						<div class="mb3 bg-noir pb6"></div>
+						<div class="mb3 bg-noir pb7"></div>
+					</div>
+					<div class="mb4 mb0-l c6 pl4-l ac">
+						<p class="mb3 pb4 lhd"><span class="mr0">&#9608;</span>&#9608;</p>
+						<p class="mb3 pb4 lhd"><span class="mr1">&#9608;</span>&#9608;</p>
+						<p class="mb3 pb4 lhd"><span class="mr2">&#9608;</span>&#9608;</p>
+						<p class="mb3 pb4 lhd"><span class="mr3">&#9608;</span>&#9608;</p>
+						<p class="mb3 pb4 lhd"><span class="mr4">&#9608;</span>&#9608;</p>
+						<p class="mb3 pb4 lhd"><span class="mr5">&#9608;</span>&#9608;</p>
+						<p class="mb3 pb4 lhd"><span class="mr6">&#9608;</span>&#9608;</p>
+						<p class="mb3 lhd"><span class="mr7">&#9608;</span>&#9608;</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="mb5">
+				<div class="ba bw2 p3">
+					<div class="ba bw2 br1 p3">
+						<div class="ba bw2 br2 p3">
+							<div class="ba bw2 br3 p3">
+								<div class="ba bw2 br4 p3">
+									<div class="ba bw2 br5 p3">
+										<div class="ba bw2 br6 p3"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mb5 r ac">
+				<div class="w1 lf sh4 bg-noir of" title=".of"></div>
+				<div class="w1 lf sh4 bg-noir o9" title=".o9"></div>
+				<div class="w1 lf sh4 bg-noir o8" title=".o8"></div>
+				<div class="w1 lf sh4 bg-noir o7" title=".o7"></div>
+				<div class="w1 lf sh4 bg-noir o6" title=".o6"></div>
+				<div class="w1 lf sh4 bg-noir o5" title=".o5"></div>
+				<div class="w1 lf sh4 bg-noir o4" title=".o4"></div>
+				<div class="w1 lf sh4 bg-noir o3" title=".o3"></div>
+				<div class="w1 lf sh4 bg-noir o2" title=".o2"></div>
+				<div class="w1 lf sh4 bg-noir o1" title=".o1"></div>
+			</div>
+		</div>
+		<div class="r">
+			<div class="c3">
+				&nbsp;
+				<nav class="psf top-b">
+					<% function renderNavigation(children, depth) { %>
+					<ul>
+						<% if (depth < 3) children.forEach(function (child) {
+                                    if (child.name) { %>
+						<li>
+							<a href="#<%- child.name %>"><span>
+									<%- child.title %></span></a>
+							<% if (child.children) renderNavigation(child.children, depth + 1); %>
+						</li>
+						<% }
+                            }); %>
+					</ul>
+					<% }
+
+                        renderNavigation(list, 1);
+
+                        %>
+				</nav>
+			</div>
+			<div class="c6">
+				<% function renderSections(children, depth) {
+                        children.forEach(function (child) {
                             if (child.name) { %>
-                                <li>
-                                    <a href="#<%- child.name %>"><span><%- child.title %></span></a>
-                                    <%
+				<section id="<%= child.name %>">
+					<h<%= depth %> class="mb2 mt4">
+						<%= child.title %>
+					</h<%= depth %>>
 
-                                    if (child.children) renderNavigation(child.children, depth + 1);
+					<div>
+						<%- child.content %>
+						<%
 
-                                    %>
-                                </li>
-                            <% }
-                        }); %>
-                    </ul>
-                <% }
+                                        if (child.children) {
+                                            renderSections(child.children, depth + 1);
+                                        }
 
-                renderNavigation(list, 1);
+                                        %>
+					</div>
+				</section>
+				<% } else { %>
+				<section>
+					<div>
+						<%- child.content %>
+						<%
 
-                %>
-            </nav>
-        </header>
-        <main>
-            <% function renderSections(children, depth) {
-                children.forEach(function (child) {
-                    if (child.name) { %>
-                        <section id="<%= child.name %>">
-                            <h<%= depth %> class="doc-section-heading"><%= child.title %></h<%= depth %>>
+                                        if (child.children) {
+                                            renderSections(child.children, depth + 1);
+                                        }
 
-                            <div>
-                                <%- child.content %>
-                                <%
+                                        %>
+					</div>
+				</section>
+				<% }
+                        });
+                    }
 
-                                if (child.children) {
-                                    renderSections(child.children, depth + 1);
-                                }
+                    renderSections(list, 2);
 
-                                %>
-                            </div>
-                        </section>
-                    <% } else { %>
-                        <section>
-                            <div>
-                                <%- child.content %>
-                                <%
+                    %>
+			</div>
+		</div>
+	</main>
+	<script src="prism.js"></script>
+	<script src="script.js"></script>
+</body>
 
-                                if (child.children) {
-                                    renderSections(child.children, depth + 1);
-                                }
-
-                                %>
-                            </div>
-                        </section>
-                    <% }
-                });
-            }
-
-            renderSections(list, 2);
-
-            %>
-        </main>
-        <script src="prism.js"></script>
-        <script src="script.js"></script>
-    </body>
 </html>
