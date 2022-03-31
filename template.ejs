@@ -224,10 +224,11 @@
 					<% function renderNavigation(children, depth) { %>
 					<ul>
 						<% if (depth < 3) children.forEach(function (child) {
-                                    if (child.name) { %>
+                            if (child.name) { %>
 						<li>
-							<a href="#<%- child.name %>"><span>
-									<%- child.title %></span></a>
+							<a href="#<%- child.name %>">
+                                <span><%- child.title %></span>
+                            </a>
 							<% if (child.children) renderNavigation(child.children, depth + 1); %>
 						</li>
 						<% }
@@ -237,7 +238,7 @@
 
                         renderNavigation(list, 1);
 
-                        %>
+                    %>
 				</nav>
 			</div>
 			<div class="c6">
